@@ -1,9 +1,9 @@
 <!-- Unit 13 Project
 Requirements
-[  ] Two Interactive Drop-down Inputs 
-[  ] Two Different jQuery Animation Methods 
-[  ] Add Five CSS Declarations
-[  ] Include Three Images
+[ yes] Two Interactive Drop-down Inputs 
+[  yes] Two Different jQuery Animation Methods 
+[ yes] Add Five CSS Declarations
+[ yes] Include Three Images
 
 Select ONE Additional Feature to Add  
 [ no ] Feature 1 - Google Font
@@ -21,20 +21,20 @@ Select ONE Additional Feature to Add
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+    <h1>Quiz About Lola!</h1>
     <hr />
     <!-- Movie Question -->
     <form id="movie-form">
       <label>
         🎥 What is my favorite movie?
         <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+          <option value="The Notebook">The Notebook</option>
+          <option value="Barbie">Barbie</option>
+          <option value="West Side Story">West Side Story</option>
+          <option value="Tick Tick Boom">Tick Tick Boom</option>
         </select>
       </label>
-      <button type="submit">Check Movie Answer</button>
+      <button type="submit">Check Answer</button>
     </form>
     <div id="movie-result"></div>
     <hr />
@@ -43,13 +43,13 @@ Select ONE Additional Feature to Add
       <label>
         📖 What is my favorite book?
         <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+          <option value="Five Feet Apart">Five Feet Apart</option>
+          <option value="The Stranger">The Stranger</option>
+          <option value="The Summer I turned Pretty">The Summer I turned Pretty</option>
+          <option value="The Houskeeper">The Housekeeper</option>
         </select>
       </label>
-      <button type="submit">Check Book Answer</button>
+      <button type="submit">Check Answer</button>
     </form>
     <div id="book-result"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -60,8 +60,10 @@ Select ONE Additional Feature to Add
 
         var $answer = $("#movie-answer");
         var answer = $answer.val();
+        
+        console.log(answer);
 
-        if (answer === "movie1") {
+        if (answer === "West Side Story") {
           $("#movie-result").text("YESSSS!");
         } else {
           $("#movie-result").text("Try Again!");
@@ -75,13 +77,17 @@ Select ONE Additional Feature to Add
         var $answer = $("#book-answer");
         var answer = $answer.val();
 
-        if (answer === "book1") {
+        if (answer === "The Stranger") {
           $("#book-result").text("YESSSS!");
         } else {
           $("#book-result").text("Try Again!");
         }
       });
     </script>
+    <img src="https://www.presenting-yourself.com/wp-content/uploads/2012/06/Fotolia_31878263_XS.jpg">
+    <h3>
+      Have a great summer Ms Hall!!
+    </h3>
   </body>
 
   <!--- Taken From Khan Academy HTML/JS: Making webpages interactive with jQuery-->
